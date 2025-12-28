@@ -3,207 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>上海交通大学天文协会</title>
-  <meta name="description" content="上海交通大学天文协会：观测 · 科普 · 交流" />
+  <title>上海交通大学天文协会 - 大事件记录</title>
+  <meta name="description" content="上海交通大学天文协会：大事件记录归档" />
   <link rel="icon" href="/favicon.ico" />
   <style>
     /* Simple, modern responsive styles */
     :root{
       --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#3b82f6; --glass: rgba(255,255,255,0.04);
-      --radius:12px; --maxw:1100px;
+      --radius:12px; --maxw:900px;
       color-scheme: dark;
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;font-family:Inter, "Helvetica Neue", Arial, sans-serif;background:linear-gradient(180deg,#071029 0%, #08111a 100%);color:#e6eef8}
     a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
     .container{max-width:var(--maxw);margin:28px auto;padding:28px}
 
-    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;gap:14px}
+    header{display:flex;align-items:center;gap:14px;margin-bottom:28px}
     .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#1f2937,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700}
-    nav{display:flex;gap:16px}
-    nav a{padding:8px 12px;border-radius:8px;font-weight:600}
 
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:20px}
-    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .card{background:var(--card);padding:24px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
 
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted);margin:10px 0 18px}
+    h1{margin:0;font-size:32px}
+    h2{margin:0 0 16px 0;font-size:24px}
+    p.lead{color:var(--muted);margin:10px 0 0}
 
-    .stats{display:flex;gap:12px;margin-top:12px}
-    .stat{background:var(--glass);padding:10px;border-radius:10px;min-width:110px;text-align:center}
-    .stat .n{font-weight:700;font-size:18px}
-    .stat .t{font-size:12px;color:var(--muted)}
+    .archive-list{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+    .archive-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);transition:all 0.2s}
+    .archive-item:hover{background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));border-color:rgba(59,130,246,0.3)}
+    .archive-icon{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(59,130,246,0.05));display:flex;align-items:center;justify-content:center;font-size:20px}
+    .archive-info{flex:1;min-width:0}
+    .archive-title{font-weight:700;font-size:16px}
+    .archive-desc{color:var(--muted);font-size:13px;margin-top:4px}
 
-    .events{display:flex;flex-direction:column;gap:12px}
-    .event{display:flex;justify-content:space-between;gap:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
-    .event .left{min-width:0}
-    .tag{background:rgba(59,130,246,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600}
-
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .member{display:flex;flex-direction:column;align-items:center;padding:12px}
-    .avatar{width:78px;height:78px;border-radius:12px;background:linear-gradient(135deg,#0b1220,#1f2937);display:flex;align-items:center;justify-content:center;font-weight:700}
-
-    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+    footer{margin-top:40px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
 
     /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:repeat(2,1fr)}
-    }
     @media (max-width:560px){
-      nav{display:none}
-      .grid-3{grid-template-columns:1fr}
+      .container{padding:16px}
+      h1{font-size:26px}
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="brand">
-        <div class="logo">SJTU</div>
-        <div>
-          <div style="font-weight:800">上海交通大学天文协会</div>
-          <div style="font-size:12px;color:var(--muted)">观测 · 科普 · 学术 · 交流</div>
-        </div>
+      <div class="logo">SJTU</div>
+      <div>
+        <div style="font-weight:800;font-size:18px">上海交通大学天文协会</div>
+        <div style="font-size:12px;color:var(--muted)">大事件记录</div>
       </div>
-      <nav>
-        <a href="#about">关于</a>
-        <a href="#events">活动</a>
-        <a href="#members">成员</a>
-        <a href="#gallery">相册</a>
-        <a href="#contact">联系</a>
-      </nav>
     </header>
 
-    <main class="hero">
-      <section class="card">
-        <h1>欢迎来到上海交通大学天文协会</h1>
-        <p class="lead">我们是由一群热爱星空与科学的在校师生组成的社团。每学期组织天文观测、天文讲座、科普活动与科研实践，向校园与公众传播天文知识。</p>
+    <main class="card">
+      <h1>大事件记录</h1>
+      <p class="lead">本页面用于归档上海交通大学天文协会的重要历史事件与备忘录。</p>
 
-        <div class="stats">
-          <div class="stat"><div class="n">80+</div><div class="t">会员人数</div></div>
-          <div class="stat"><div class="n">50+</div><div class="t">观测场次</div></div>
-          <div class="stat"><div class="n">10+</div><div class="t">科普讲座</div></div>
-        </div>
+      <hr style="margin:24px 0;border:none;border-top:1px solid rgba(255,255,255,0.05)">
 
-        <div style="margin-top:18px;display:flex;gap:10px">
-          <a href="#events" style="background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:700">查看近期活动</a>
-          <a href="#contact" style="border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px">加入我们</a>
-        </div>
-
-        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
-
-        <h3>最新公告</h3>
-        <ul style="color:var(--muted);padding-left:18px">
-          <li>12月 观测夜：12月15日（周二），地点：崇明天文台（报名链接见社群）</li>
-          <li>冬季科普讲座系列：每周三 18:30，主讲：本会资深成员</li>
-        </ul>
-      </section>
-
-      <aside class="card">
-        <h3 style="margin-top:0">快速联系</h3>
-        <p style="color:var(--muted);margin-top:6px">电子邮箱：<a href="mailto:astro@sjtu.edu.cn">astro@sjtu.edu.cn</a></p>
-        <p style="color:var(--muted);margin-top:6px">GitHub: <a href="https://github.com/your-sjtu-astro">your-sjtu-astro</a></p>
-
-        <div style="margin-top:12px">
-          <div style="font-weight:700">下次活动</div>
-          <div style="color:var(--muted);margin-top:6px">天文观测：2026-01-10 • 夜间观测与摄影 • 报名截止：2026-01-07</div>
-        </div>
-
-        <div style="margin-top:18px">
-          <div style="font-weight:700;margin-bottom:8px">社交媒体</div>
-          <div style="display:flex;gap:8px">
-            <a class="tag" href="#">WeChat</a>
-            <a class="tag" href="#">B站</a>
-            <a class="tag" href="#">微博</a>
+      <h2>档案索引</h2>
+      <div class="archive-list">
+        <a href="./关于二零二五年有关历史问题的决议/init.md" class="archive-item">
+          <div class="archive-icon">📁</div>
+          <div class="archive-info">
+            <div class="archive-title">关于二零二五年有关历史问题的决议</div>
+            <div class="archive-desc">2025年重要历史事件决议文档</div>
           </div>
-        </div>
-      </aside>
+        </a>
+      </div>
     </main>
 
-    <section id="events" class="card" style="margin-top:20px">
-      <h2>近期活动</h2>
-      <div class="events">
-        <div class="event">
-          <div class="left">
-            <div style="font-weight:700">天文观测夜 — 校园望远镜实操</div>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">地点：徐汇校区天文台 • 时间：1月10日 19:00</div>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:center">
-            <div class="tag">报名中</div>
-            <div style="color:var(--muted);font-size:12px;margin-top:8px">限额 30 人</div>
-          </div>
-        </div>
-
-        <div class="event">
-          <div class="left">
-            <div style="font-weight:700">冬季天文学讲座：恒星演化</div>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">时间：每周三 18:30 • 地点：教学楼 201</div>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:center">
-            <div class="tag">常规活动</div>
-            <div style="color:var(--muted);font-size:12px;margin-top:8px">免报名</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="members" class="card" style="margin-top:20px">
-      <h2>核心成员</h2>
-      <div class="grid-3" style="margin-top:12px">
-        <div class="member">
-          <div class="avatar">李</div>
-          <div style="font-weight:700;margin-top:8px">李明（会长）</div>
-          <div style="color:var(--muted);font-size:13px">专业：物理系 • 负责观测与外联</div>
-        </div>
-        <div class="member">
-          <div class="avatar">王</div>
-          <div style="font-weight:700;margin-top:8px">王晓（副会长）</div>
-          <div style="color:var(--muted);font-size:13px">专业：天文学 • 负责讲座与科普</div>
-        </div>
-        <div class="member">
-          <div class="avatar">张</div>
-          <div style="font-weight:700;margin-top:8px">张华（技术）</div>
-          <div style="color:var(--muted);font-size:13px">负责设备与图像处理</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="card" style="margin-top:20px">
-      <h2>相册</h2>
-      <p style="color:var(--muted)">（将观测与活动照片放在 /assets 或 GitHub 仓库，下面为示例占位）</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px">
-        <div style="height:120px;border-radius:8px;background:linear-gradient(135deg,#071029,#0b1220);display:flex;align-items:center;justify-content:center">照片1</div>
-        <div style="height:120px;border-radius:8px;background:linear-gradient(135deg,#071029,#0b1220);display:flex;align-items:center;justify-content:center">照片2</div>
-        <div style="height:120px;border-radius:8px;background:linear-gradient(135deg,#071029,#0b1220);display:flex;align-items:center;justify-content:center">照片3</div>
-      </div>
-    </section>
-
-    <section id="contact" class="card" style="margin-top:20px">
-      <h2>联系我们 / 加入我们</h2>
-      <p style="color:var(--muted)">欢迎任何对天文感兴趣的同学加入。请在邮件中说明：姓名 / 学院 / 联系方式 / 感兴趣方向。</p>
-
-      <form onsubmit="event.preventDefault();alert('感谢你的申请！请手动发送邮件到 astro@sjtu.edu.cn 或在社群中联系管理员。')" style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
-        <input placeholder="姓名" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-        <input placeholder="学院 / 年级" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-        <input placeholder="邮箱或微信号" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-        <textarea placeholder="你感兴趣的方向 / 简短自我介绍 (可选)" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
-        <div style="display:flex;gap:8px">
-          <button style="background:var(--accent);color:white;padding:10px 12px;border-radius:8px;border:none;font-weight:700">提交（模拟）</button>
-          <a href="mailto:astro@sjtu.edu.cn" style="align-self:center">发送邮件加入</a>
-        </div>
-      </form>
-    </section>
-
     <footer>
-      © 上海交通大学天文协会 • <a href="https://github.com/your-sjtu-astro">GitHub 仓库</a> • 制作：本会技术部
+      © 上海交通大学天文协会 • <a href="https://github.com/xiuyunMarx/SJTUAstronomyAssociation.github.io">GitHub 仓库</a>
     </footer>
   </div>
 
   <script>
-    // 小交互：跳转锚点平滑滚动
+    // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         e.preventDefault();const id=a.getAttribute('href');if(id==='#')return;const el=document.querySelector(id);if(el){el.scrollIntoView({behavior:'smooth',block:'start'})}
