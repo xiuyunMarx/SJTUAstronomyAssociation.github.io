@@ -20,7 +20,7 @@
     .container{max-width:var(--maxw);margin:28px auto;padding:28px}
 
     header{display:flex;align-items:center;gap:14px;margin-bottom:28px}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#1f2937,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#1f2937,#0b1220);display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);color:#fff;font-size:18px;border:1px solid rgba(255,255,255,0.1)}
 
     .card{background:var(--card);padding:32px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);border: 1px solid rgba(255,255,255,0.02);}
 
@@ -31,9 +31,9 @@
 
     /* Archive List Styles */
     .archive-list{display:flex;flex-direction:column;gap:12px;margin-top:16px}
-    .archive-item{display:flex;align-items:center;gap:16px;padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);transition:all 0.2s;text-decoration: none !important;}
+    .archive-item{display:flex;align-items:center;gap:16px;padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.05);transition:all 0.2s ease}
     .archive-item:hover{background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));border-color:rgba(59,130,246,0.5);transform: translateY(-2px);}
-    .archive-icon{width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(59,130,246,0.05));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink: 0;}
+    .archive-icon{width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(59,130,246,0.05));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
     .archive-info{flex:1;min-width:0}
     .archive-title{font-weight:700;font-size:16px;color: #e6eef8;}
     .archive-desc{color:var(--muted);font-size:13px;margin-top:4px}
@@ -138,6 +138,18 @@
           <div class="archive-info">
             <div class="archive-title">岫筠公书</div>
             <div class="archive-desc">点击跳转至 GitHub 查看相关文档</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/xiuyunMarx/SJTUAstronomyAssociation.github.io/blob/main/%E5%A4%AA%E5%BA%99/%E4%B8%87%E5%AF%BF%E7%89%8C%E4%BD%8D.md" class="archive-item" target="_blank" style="align-items: flex-start;">
+          <div class="archive-icon">⛩️</div>
+          <div class="archive-info">
+            <div class="archive-title">万寿牌位</div>
+            <div class="archive-desc" style="margin-top:8px; line-height: 1.6;">
+              <strong style="color:#e6eef8; font-size:14px;">陈敬涵</strong><br>
+              男，汉族，2023 年进入上海交通大学，2025 年一二二七事变后担任天协社长。<br>
+              <img src="https://raw.githubusercontent.com/xiuyunMarx/SJTUAstronomyAssociation.github.io/main/%E5%A4%AA%E5%BA%99/%E9%99%88%E6%95%AC%E6%B6%B5.jpg" alt="陈敬涵" style="margin-top:8px; width:100%; max-width:200px; border-radius:6px; border:1px solid rgba(255,255,255,0.1);">
+            </div>
           </div>
         </a>
       </div>
